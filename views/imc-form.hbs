@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+</head>
+<body>
+    <h1>Calcular IMC</h1>
+    <form action="/imc" method="POST">
+      {{#fields}} 
+        {{#field}} 
+          <label>{{label}}</label> 
+          <input type="{{type}}" name="{{name}}"{{#errors}} class="error"{{/errors}}> 
+        {{/field}} 
+      {{/fields}}
+      <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
